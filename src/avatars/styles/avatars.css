@@ -1,1 +1,88 @@
-/* 여기에 스타일을 구현해 주세요 */
+body {
+  background-color: whitesmoke;
+}
+
+/* 첫 번째 줄 컨테이너 박스와 두 번째 줄 컨테이너 박스를 담는 wrapper박스 */
+.wrapper {
+  position: fixed;
+  height: 148px;
+  width: 336px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* 첫 번째 줄 사진을 담는 컨테이너 박스 */
+.first_container {
+  width: 336px;
+  height: 64px;
+  margin: 0 0 20px 0;
+}
+
+/* 두 번째줄 사진을 담는 컨테이너 박스 */
+.second_container {
+  width: 336px;
+  height: 64px;
+}
+
+.first_container img {
+  height: 64px;
+  width: 64px;
+  margin: 0 20px 0 0;
+  border-radius: 50%;
+}
+
+.second_container img {
+  height: 64px;
+  width: 64px;
+  margin: 0 20px 0 0;
+  border-radius: 50%;
+}
+
+/* 첫 번째 줄 사진들을 각각 담는 각각의 div요소 */
+.first_container div {
+  position: relative;
+  float: left;
+  width: 84px;
+  height: 64px;
+}
+
+/* 첫 번째 줄 사진들을 각각 담는 각각의 div요소 */
+.second_container div {
+  position: relative;
+  float: left;
+  width: 84px;
+  height: 64px;
+}
+
+/* 상태 표시하는 가상의 요소를 만듬. 
+이 요소는 이미지의 부모 요소인 div 요소의 위치를 기준으로 한다. */
+.first_avatar::after,
+.third_avatar::after,
+.seventh_avatar::after,
+.eighth_avatar::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 45px;
+  left: 45px;
+  background-color: #dbdbdb;
+}
+
+.second_avatar::after,
+.fourth_avatar::after,
+.fifth_avatar::after,
+.sixth_avatar::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 45px;
+  left: 45px;
+  background-color: #4cfe88;
+}
